@@ -10,6 +10,7 @@ module RailsAdminNestable
           output = content_tag :div, 'drag', class: 'dd-handle dd3-handle'
           output+= content_tag :div, class: 'dd3-content' do
             content = link_to @model_config.with(object: tree_node).object_label, edit_path(@abstract_model, tree_node.id)
+            content+= link_to @model_config.with(object: tree_node).object_label, edit_path(@abstract_model, tree_node.id)
             content+= content_tag :div, action_links(tree_node), class: 'pull-right links'
           end
 
